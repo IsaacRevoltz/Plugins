@@ -221,7 +221,6 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text=f"**⚡ Lendário Hellbot ⚡**",
                 buttons=[
                     [Button.url("📑 Repo 📑", "https://github.com/IsaacRevoltz/HellBot")],
-                    [Button.url("HellBot Network", "https://t.me/hellbot_network")],
                     [Button.url("Tradutor do bot", "https://t.me/isaacpains")],
                 ],
             )
@@ -286,7 +285,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             reply_pop_up_alert = "This is for other users!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
-            await event.edit(f"As you wish. **BLOCKED !!**")
+            await event.edit(f"Como você preferir. **BLOCKED !!**")
             await H1(functions.contacts.BlockRequest(event.query.user_id))
             target = await event.client(GetFullUserRequest(event.query.user_id))
             first_name = html.escape(target.user.first_name)
