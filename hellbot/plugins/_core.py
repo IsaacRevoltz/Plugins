@@ -46,7 +46,7 @@ async def send(event):
     message_id = event.reply_to_msg_id or event.message.id
     thumb = hell_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt]({chnl_link})** ⚡"
+    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[Lendário HellBot]({chnl_link})** ⚡"
     the_plugin_file = "./hellbot/plugins/{}.py".format(input_str.lower())
     if os.path.exists(the_plugin_file):
         await event.client.send_file(
