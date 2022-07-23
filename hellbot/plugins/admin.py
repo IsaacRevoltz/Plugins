@@ -325,7 +325,7 @@ async def nomuth(event):
 @hell_cmd(pattern="ban(?:\s|$)([\s\S]*)")
 @errors_handler
 async def ban(event):
-    hellevent = await eor(event, "`Banning Nigga...`")
+    hellevent = await eor(event, "`Banning...`")
     chat = await event.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
