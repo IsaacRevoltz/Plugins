@@ -91,8 +91,7 @@ async def codename_info(request):
 
     data = json.loads(
         get(
-            "https://raw.githubusercontent.com/androidtrackers/"
-            "certified-android-devices/master/by_brand.json"
+            "https://raw.githubusercontent.com/androidtrackers/certified-android-devices/master/by_brand.json"
         ).text
     )
     devices_lower = {k.lower(): v for k, v in data.items()}
