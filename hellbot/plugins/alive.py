@@ -17,8 +17,8 @@ ALIVE_TEMP = """
 ┣─ <b>» Telethon ~</b> <i>{}</i>
 ┣─ <b>» HellBot ~</b> <i>{}</i>
 ┣─ <b>» Sudo ~</b> <i>{}</i>
-┣─ <b>» Uptime ~</b> <i>{}</i>
-┣─ <b>» Ping ~</b> <i>{}</i>
+┣─ <b>» Tempo de atividade ~</b> <i>{}</i>
+┣─ <b>» Ping ~</b> <i>{}</i>ms
 ╰──────────────
 <b><i>»»» <a href='https://github.com/IsaacRevoltz/HellBot/'>[ HellBot ]</a> «««</i></b>
 """
@@ -38,7 +38,7 @@ async def up(event):
     cid = await client_id(event)
     ForGo10God, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
     start = datetime.datetime.now()
-    hell = await eor(event, "`Building Alive....`")
+    hell = await eor(event, "`Construindo Alive...`")
     uptime = await get_time((time.time() - StartTime))
     a = gvarstat("ALIVE_PIC")
     pic_list = []
