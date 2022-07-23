@@ -109,10 +109,10 @@ async def on_afk(event):
     if gvarstat("AFK") == "YES" and not (await event.get_sender()).bot:
         msg = None
         if reason_1 == "":
-            message_to_reply = f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
+            message_to_reply = f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
         else:
             message_to_reply = (
-                f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
+                f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                 + f"\n**💬 Reason :** {reason_1}"
                 )
         msg = await event.reply(message_to_reply, file=hellpic_1)
@@ -154,7 +154,7 @@ async def _(event):
         if owo == "":
             addgvar("AFK", "YES")
             x = await event.client.send_message(
-                event.chat_id, f"**I'm going afk🚶**", file=hellpic_1)
+                event.chat_id, f"**Vou ficar afk🚶**", file=hellpic_1)
             try:
                 await unsave_gif(event, x)
                 xy = await event.client.send_message(
@@ -170,7 +170,7 @@ async def _(event):
         else:
             addgvar("AFK", "YES")
             x = await event.client.send_message(
-                event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_1}`", file=hellpic_1)
+                event.chat_id, f"**Vou ficar afk🚶**\n\n**Because :** `{reason_1}`", file=hellpic_1)
             try:
                 await unsave_gif(event, x)
                 xy = await event.client.send_message(
@@ -242,10 +242,10 @@ if H2:
         if gvarstat("AFK2") == "YES" and not (await event.get_sender()).bot:
             msg = None
             if reason_2 == "":
-                message_to_reply = f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
+                message_to_reply = f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
             else:
                 message_to_reply = (
-                    f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
+                    f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_2}"
                     )
             msg = await event.reply(message_to_reply, file=hellpic_2)
@@ -287,7 +287,7 @@ if H2:
             if owo == "":
                 addgvar("AFK2", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_2)
+                    event.chat_id, f"**Vou ficar afk🚶**", file=hellpic_2)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
@@ -303,7 +303,7 @@ if H2:
             else:
                 addgvar("AFK2", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_2}`", file=hellpic_2)
+                    event.chat_id, f"**Vou ficar afk🚶**\n\n**Because :** `{reason_2}`", file=hellpic_2)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
@@ -375,10 +375,10 @@ if H3:
         if gvarstat("AFK3") == "YES" and not (await event.get_sender()).bot:
             msg = None
             if reason == "":
-                message_to_reply = f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
+                message_to_reply = f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
             else:
                 message_to_reply = (
-                    f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
+                    f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_3}"
                     )
             msg = await event.reply(message_to_reply, file=hellpic_3)
@@ -420,7 +420,7 @@ if H3:
             if owo == "":
                 addgvar("AFK3", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_3)
+                    event.chat_id, f"**Vou ficar afk🚶**", file=hellpic_3)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
@@ -436,7 +436,7 @@ if H3:
             else:
                 addgvar("AFK3", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_3}`", file=hellpic_3)
+                    event.chat_id, f"**Vou ficar afk🚶**\n\n**Because :** `{reason_3}`", file=hellpic_3)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
@@ -508,10 +508,10 @@ if H4:
         if gvarstat("AFK4") == "YES" and not (await event.get_sender()).bot:
             msg = None
             if reason_4 == "":
-                message_to_reply = f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
+                message_to_reply = f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
             else:
                 message_to_reply = (
-                    f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
+                    f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_4}"
                     )
             msg = await event.reply(message_to_reply, file=hellpic_4)
@@ -553,7 +553,7 @@ if H4:
             if owo == "":
                 addgvar("AFK4", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_4)
+                    event.chat_id, f"**Vou ficar afk🚶**", file=hellpic_4)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
@@ -569,7 +569,7 @@ if H4:
             else:
                 addgvar("AFK4", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_4}`", file=hellpic_4)
+                    event.chat_id, f"**Vou ficar afk🚶**\n\n**Because :** `{reason_4}`", file=hellpic_4)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
@@ -641,10 +641,10 @@ if H5:
         if gvarstat("AFK5") == "YES" and not (await event.get_sender()).bot:
             msg = None
             if reason_5 == "":
-                message_to_reply = f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
+                message_to_reply = f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`"
             else:
                 message_to_reply = (
-                    f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
+                    f"**Mensagem automática: Estou ausente no momento!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_5}"
                     )
             msg = await event.reply(message_to_reply, file=hellpic_5)
@@ -686,7 +686,7 @@ if H5:
             if owo == "":
                 addgvar("AFK5", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_5)
+                    event.chat_id, f"**Vou ficar afk🚶**", file=hellpic_5)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
@@ -702,7 +702,7 @@ if H5:
             else:
                 addgvar("AFK5", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_5}`", file=hellpic_5)
+                    event.chat_id, f"**Vou ficar afk🚶**\n\n**Because :** `{reason_5}`", file=hellpic_5)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
