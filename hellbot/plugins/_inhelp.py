@@ -31,7 +31,7 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 LOG_GP = Config.LOGGER_ID
-USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blocked and Reported**"
+USER_BOT_WARN_ZERO = "Chega de mensagens no privado do mestre!! \n\n**🚫 VOCÊ FOI BLOQUEADO**"
 
 alive_txt = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
@@ -124,7 +124,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
         elif event.query.user_id in auth and query == "alive":
             uptime = await get_time((time.time() - StartTime))
-            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>нєℓℓвσт ιѕ σиℓιиє</b> «««"
+            alv_msg = gvarstat("ALIVE_MSG") or "»»» <b>O PAI TÁ ON</b> «««"
             he_ll = alive_txt.format(alv_msg, tel_ver, hell_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{HELL_USER}", f"tg://openmessage?user_id={ForGo10God}")],
@@ -168,8 +168,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
 
         elif event.query.user_id in auth and query == "pm_warn":
-            CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
-            HELL_FIRST = "**🔥 Hêllẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nHello!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(hell_mention, CSTM_PMP)
+            CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**Você invadiu o PM do meu mestre!\nIsso é ilegal e considerado crime.**"
+            HELL_FIRST = "**🔥 Protocolo de segurança HellBot 🔥**\n\nHello!! Bem vindo ao {} PV. Isso é uma mensagem automática.\n\n{}".format(hell_mention, CSTM_PMP)
             a = gvarstat("PMPERMIT_PIC")
             pic_list = []
             if a:
@@ -179,15 +179,15 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
+                PIC = "https://i.ibb.co/CBvqt88/wait-a-minute-who-are-you.gif"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     file=PIC,
                     text=HELL_FIRST,
                     buttons=[
-                        [custom.Button.inline("📝 Request Approval", data="req")],
+                        [custom.Button.inline("📝 Pedir Aprovação", data="req")],
                         [custom.Button.inline("🚫 Block", data="heheboi")],
-                        [custom.Button.inline("❓ Curious", data="pmclick")],
+                        [custom.Button.inline("❓ Curiosidades", data="pmclick")],
                     ],
                     link_preview=False,
                 )
@@ -197,9 +197,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     text=HELL_FIRST,
                     title="Hellbot PM Permit",
                     buttons=[
-                        [custom.Button.inline("📝 Request Approval", data="req")],
+                        [custom.Button.inline("📝 Pedir Aprovação", data="req")],
                         [custom.Button.inline("🚫 Block", data="heheboi")],
-                        [custom.Button.inline("❓ Curious", data="pmclick")],
+                        [custom.Button.inline("❓ Curiosidades", data="pmclick")],
                     ],
                     link_preview=False,
                 )
@@ -208,9 +208,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     text=HELL_FIRST,
                     title="Hellbot PM Permit",
                     buttons=[
-                        [custom.Button.inline("📝 Request Approval", data="req")],
+                        [custom.Button.inline("📝 Pedir Aprovação", data="req")],
                         [custom.Button.inline("🚫 Block", data="heheboi")],
-                        [custom.Button.inline("❓ Curious", data="pmclick")],
+                        [custom.Button.inline("❓ Curiosidades", data="pmclick")],
                     ],
                     link_preview=False,
                 )
@@ -218,10 +218,11 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id in auth and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**",
+                text=f"**⚡ Lendário Hellbot ⚡**",
                 buttons=[
-                    [Button.url("📑 Repo 📑", "https://github.com/The-HellBot/HellBot")],
-                    [Button.url("HellBot Netwprk", "https://t.me/hellbot_network")],
+                    [Button.url("📑 Repo 📑", "https://github.com/IsaacRevoltz/HellBot")],
+                    [Button.url("HellBot Network", "https://t.me/hellbot_network")],
+                    [Button.url("Tradutor do bot", "https://t.me/isaacpains")],
                 ],
             )
 
