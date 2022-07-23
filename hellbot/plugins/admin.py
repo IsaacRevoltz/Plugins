@@ -192,7 +192,7 @@ async def muth(event):
         await event.get_reply_message()
         replied_user = await event.client(GetFullUserRequest(event.chat_id))
         if is_muted(event.chat_id, event.chat_id):
-            return await eod(hell, "Nigga is already muted here 🥴")
+            return await eod(hell, "Is already muted here 🥴")
         if event.chat_id == ForGo10God:
             return await eod(hell, "You can't mute yourself !")
         try:
@@ -495,17 +495,17 @@ async def kick(event):
 async def rm_deletedacc(event):
     con = event.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "`No zombies or deleted accounts found in this group, Group is clean`"
+    del_status = "`Sem zumbies ou contas deletas no grupo, o grupo está limpo`"
     if con != "clean":
         event = await eor(
-            event, "**Searching For Zombies...**"
+            event, "**Procurando as mulas, digo os atoas ...**"
         )
         async for user in event.client.iter_participants(event.chat_id):
             if user.deleted:
                 del_u += 1
                 await sleep(0.5)
         if del_u > 0:
-            del_status = f"**🆘 ALERT !!**\n\n`{del_u}`  **Zombies detected ☣️\nClean them by using**  `{hl}zombies clean`"
+            del_status = f"**🆘 ALERT !!**\n\n`{del_u}`  **MULA DETECTADA ☣️\ntire eles usando**  `{hl}zombies clean`"
         await event.edit(del_status)
         return
     chat = await event.get_chat()
@@ -515,7 +515,7 @@ async def rm_deletedacc(event):
         await eod(event, NO_ADMIN)
         return
     event = await eor(
-        event, "🧹 Purging out zombies from this group..."
+        event, "🧹 Dando uma  varrida no lixo para fora..."
     )
     del_u = 0
     del_a = 0
@@ -531,9 +531,9 @@ async def rm_deletedacc(event):
             except UserAdminInvalidError:
                 del_a += 1
     if del_u > 0:
-        del_status = f"**Zombies Purged!!**\n\n**Zombies Killed :**  `{del_u}`"
+        del_status = f"**Zombies Purged!!**\n\n**Zombies Eliminados :**  `{del_u}`"
     if del_a > 0:
-        del_status = f"**Zombies Killed**  `{del_u}`\n\n`{del_a}`  **Zombies Holds Immunity!!**"
+        del_status = f"**Zombies Eliminados**  `{del_u}`\n\n`{del_a}`  **Zombies Holds Immunity!!**"
     await edit_or_reply(event, del_status)
     await event.client.send_message(
         lg_id,
