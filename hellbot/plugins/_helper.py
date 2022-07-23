@@ -10,7 +10,6 @@ from . import *
 msg = f"""
 **⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**
   •        [📑 Repo 📑](https://github.com/IsaacRevoltz/HellBot)
-  •        [HellBot Network](https://t.me/hellbot_network)
   •  ©️ {hell_channel} ™
 """
 botname = Config.BOT_USERNAME
