@@ -239,7 +239,7 @@ async def kang(event):
 
                 elif is_vid:
                     packname = f"Hellbot_{un_}_{pack}_vid"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† (Video)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot (Video)"
                     cmd = "/newvideo"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
@@ -267,7 +267,7 @@ async def kang(event):
             async with event.client.conversation("Stickers") as conv:
                 if not is_anim and not is_vid:
                     packname = f"Hellbot_{un_}_{pack}"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack}"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack}"
                     cmd = "/newpack"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -295,7 +295,7 @@ async def kang(event):
             
                 if is_anim:
                     packname = f"Hellbot_{un_}_{pack}_anim"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -326,7 +326,7 @@ async def kang(event):
 
                 if is_vid:
                     packname = f"Hellbot_{un_}_{pack}_vid"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† (Video)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot (Video)"
                     cmd = "/newvideo"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -499,7 +499,7 @@ async def _(event):
     if not rply:
         return await eod(hel_, "`Reply to a stciker to kang that pack.`")
     if hell == "":
-        pname = f"{un}'s Hêllẞø† Pack"
+        pname = f"{un}'s HellBot Pack"
     else:
         pname = hell
     if rply and rply.media and rply.media.document.mime_type == "image/webp":
