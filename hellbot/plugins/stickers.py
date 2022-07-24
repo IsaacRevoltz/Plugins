@@ -20,18 +20,12 @@ from hellbot.sql.gvar_sql import addgvar, gvarstat
 from . import *
 
 KANGING_STR = [
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
-    "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
-    "Imprisoning this sticker...",
-    "Mr.Steal Your Sticker is stealing this sticker... ",
-    "Hey! That's my sticker. Lemme get it back...",
-    "Turn around, Go straight and f*ck off...",
+    "Hmmm deixa eu dar uma olhadinha nesse sticker...",
+    "Plagiando hehe..",
+    "Colocando o sticker no meu pack...",
+    "Roubando o sticker hehe.",
+    "Kangando o sticker",
+    "Tá moscano jão? passa esse sticker pra cá",
 ]
 
 
@@ -114,7 +108,7 @@ async def kang(event):
                 emoji = splat[1]
 
         packname = f"Hellbot_{un_}_{pack}"
-        packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack}"
+        packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
