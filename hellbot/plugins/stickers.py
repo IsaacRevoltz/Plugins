@@ -142,7 +142,7 @@ async def kang(event):
                     while "120" in x.text:
                         pack += 1
                         packname = f"Hellbot_{un_}_{pack}"
-                        packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack}"
+                        packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack}"
                         cmd = "/newpack"
                         await hell.edit(f"`Switching to Pack {str(pack)} due to insufficient space`")
                         await conv.send_message(packname)
@@ -186,7 +186,7 @@ async def kang(event):
 
                 if is_anim:
                     packname = f"Hellbot_{un_}_{pack}_anim"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
