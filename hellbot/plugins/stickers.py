@@ -1,3 +1,31 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@IsaacRevoltz 
+The-HellBot
+/
+Plugins
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Plugins/hellbot/plugins/stickers.py /
+@HellBoy-OP
+HellBoy-OP better
+Latest commit 0c77a1c on Mar 10
+ History
+ 1 contributor
+665 lines (614 sloc)  29.4 KB
+
 import asyncio
 import io
 import math
@@ -20,12 +48,18 @@ from hellbot.sql.gvar_sql import addgvar, gvarstat
 from . import *
 
 KANGING_STR = [
-    "Hmmm deixa eu dar uma olhadinha nesse sticker...",
-    "Plagiando hehe..",
-    "Colocando o sticker no meu pack...",
-    "Roubando o sticker hehe.",
-    "Kangando o sticker",
-    "Tá moscano jão? passa esse sticker pra cá",
+    "Using Witchery to kang this sticker...",
+    "Plagiarising hehe...",
+    "Inviting this sticker over to my pack...",
+    "Kanging this sticker...",
+    "Hey that's a nice sticker!\nMind if I kang?!..",
+    "hehe me stel ur stikér\nhehe.",
+    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
+    "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
+    "Imprisoning this sticker...",
+    "Mr.Steal Your Sticker is stealing this sticker... ",
+    "Hey! That's my sticker. Lemme get it back...",
+    "Turn around, Go straight and f*ck off...",
 ]
 
 
@@ -108,7 +142,7 @@ async def kang(event):
                 emoji = splat[1]
 
         packname = f"Hellbot_{un_}_{pack}"
-        packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack}"
+        packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -142,7 +176,7 @@ async def kang(event):
                     while "120" in x.text:
                         pack += 1
                         packname = f"Hellbot_{un_}_{pack}"
-                        packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack}"
+                        packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack}"
                         cmd = "/newpack"
                         await hell.edit(f"`Switching to Pack {str(pack)} due to insufficient space`")
                         await conv.send_message(packname)
@@ -186,7 +220,7 @@ async def kang(event):
 
                 if is_anim:
                     packname = f"Hellbot_{un_}_{pack}_anim"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack} (Animated)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
@@ -239,7 +273,7 @@ async def kang(event):
 
                 elif is_vid:
                     packname = f"Hellbot_{un_}_{pack}_vid"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot (Video)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† (Video)"
                     cmd = "/newvideo"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
@@ -267,7 +301,7 @@ async def kang(event):
             async with event.client.conversation("Stickers") as conv:
                 if not is_anim and not is_vid:
                     packname = f"Hellbot_{un_}_{pack}"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack}"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack}"
                     cmd = "/newpack"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -295,7 +329,7 @@ async def kang(event):
             
                 if is_anim:
                     packname = f"Hellbot_{un_}_{pack}_anim"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot Vol.{pack} (Animated)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -326,7 +360,7 @@ async def kang(event):
 
                 if is_vid:
                     packname = f"Hellbot_{un_}_{pack}_vid"
-                    packnick = f"{hellbot}" if hellbot else f"{un}'s HellBot (Video)"
+                    packnick = f"{hellbot}" if hellbot else f"{un}'s Hêllẞø† (Video)"
                     cmd = "/newvideo"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -499,7 +533,7 @@ async def _(event):
     if not rply:
         return await eod(hel_, "`Reply to a stciker to kang that pack.`")
     if hell == "":
-        pname = f"{un}'s HellBot Pack"
+        pname = f"{un}'s Hêllẞø† Pack"
     else:
         pname = hell
     if rply and rply.media and rply.media.document.mime_type == "image/webp":
@@ -657,3 +691,18 @@ CmdHelp("stickers").add_command(
 ).add_warning(
   "✅ Harmless Module."
 ).add()
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+You have no unread notifications
