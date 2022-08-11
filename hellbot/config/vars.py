@@ -2,11 +2,10 @@
 
 import os
 
-
 if os.path.exists("config.py"):
-    from config import Development as Config
+    from config import Development as Config  # noqa
 else:
-    from .hell_config import Config
+    from .config import Config  # noqa
 
 
 # hellbot
